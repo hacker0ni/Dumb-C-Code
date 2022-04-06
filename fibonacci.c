@@ -10,11 +10,12 @@ int main() {
 
                 unsigned long long x = 1;
                 unsigned long long y = 1;
+                unsigned long long z = 0;
                 while ( counter <= limit ) {
-                        printf("%llu %llu ",x,y);
-                        x = x+y;
-                        y = x+y;
-                
+                        printf("%llu ", x);
+                        x = y + z;
+                        z = y;
+                        y = x;
                         counter++;
                 }
                 return(0);
